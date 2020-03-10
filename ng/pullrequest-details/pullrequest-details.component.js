@@ -28,10 +28,7 @@ angular.
               });
               Promise.all([p1, p2]).then(function(){
                 console.log(self.pr.source.repository.full_name)
-                console.log(self.pr.source.repository)
-                console.log(self.pr.source)
-                console.log(self.pr)
-                console.log(self)
+                console.log(self.pr.destination.repository.full_name)
                 self.diff_url = $rootScope.projects[self.project_slug]['github_repo'] + '/' + 'compare/'+ self.dest_commit['git_hash'] + '..' + self.merge_commit['git_hash']
               });
 
